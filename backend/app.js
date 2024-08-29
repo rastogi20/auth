@@ -18,10 +18,10 @@ mongoose.connect('mongodb+srv://rastogisahil20:TgKN1rF9TDVx9f4m@cluster0.3cojm.m
   .catch((err) => console.error('mongodb connection error:', err));
 
 // Middleware configuration
+app.use(cors({ credentials:"true"}));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({ credentials:"true"}));
 
 app.use(session({
   secret:"$uperMan@123" , 
